@@ -4,12 +4,14 @@ import { NativeBaseProvider, FlatList, ScrollView, Divider, Image, Spinner } fro
 import { services } from '../services/services';
 import moment from 'moment'
 
-export default function All() {
+export const Business = () => {
+
+    
 
     const [newsData, setNewsData] = useState([])
 
     useEffect(() => {
-        services('general')
+        services('business')
             .then(data => {
                 setNewsData(data)
             })
